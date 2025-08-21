@@ -14,41 +14,27 @@
   </div>
   {{ end }}
 
-  {{/* Posts für diesen Taxonomie-Begriff */}}
-  {{ $pages := .Pages }}
-  {{ $paginator := .Paginate $pages }}
+  {{/* Alphabetisch; alternativ .Data.Terms.ByCount für Häufigkeit */}}
+  {{ $terms := .Data.Terms.Alphabetical }}
 
-  <div role="list">
-    {{ range $paginator.Pages }}
-      <div class="postListItem" role="listitem">
-        <a class="postListLink" href="{{ .Permalink }}">
-          <div class="postHeader">
-            <span class="postTitle">{{ .Title }}</span>
-            {{ $layout := .Site.Params.displayDateFormat | default "2006-01-02" }}
-            {{ $iso := .Date | time.Format "2006-01-02" }}
-            <time class="postDate" datetime="{{ $iso }}">{{ .Date | time.Format $layout }}</time>
+  {{ if not $terms }}
+    <p>{{ i18n "no_terms" }}</p>
+  {{ else }}
+    <div role="list">
+      {{ range $terms }}
+        <div class="postListItem" role="listitem">
+          <a class="postListLink" href="{{ .Page.Permalink }}">
+            <div class="postHeader">
+              <span class="postTitle">{{ .Term }}</span>
+              <span class="postDate">({{ .Count }})</span>
+            </div>
+          </a>
+          <div class="postExcerpt">
+            <p>{{ i18n "posts_with_term" }}: {{ .Term }}</p>
           </div>
-
-          {{/* Reading Time Regeln wie in deiner list.html */}}
-          {{ $showReadingTime := true }}
-          {{ if eq .Site.Params.showReadingTime false }}{{ $showReadingTime = false }}{{ end }}
-          {{ if eq .Site.Params.readingTime false }}{{ $showReadingTime = false }}{{ end }}
-          {{ if eq .Params.showReadingTime false }}{{ $showReadingTime = false }}{{ end }}
-          {{ if $showReadingTime }}
-          <div class="readingTime">
-            {{ i18n "reading_time" }}: {{ i18n "reading_time_desc" .ReadingTime }}
-          </div>
-          {{ end }}
-        </a>
-
-        <div class="postExcerpt">
-          <p>{{ .Summary }}</p>
         </div>
-      </div>
-    {{ end }}
-  </div>
-
-  {{ partial "pagination.html" (dict "paginator" $paginator) }}
-  
+      {{ end }}
+    </div>
+  {{ end }}
 </div>
 {{ end }}
