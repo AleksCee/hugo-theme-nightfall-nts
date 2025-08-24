@@ -1,9 +1,9 @@
 # Nightfall
 
-**An independent clone/fork with support for pagination and the [new template system in Hugo v0.146.0](https://gohugo.io/templates/new-templatesystem-overview/)**  
-Waiting for PRs in the original theme: [pagination](https://github.com/lordmathis/hugo-theme-nightfall/pull/61) and [new template system](https://github.com/AleksCee/hugo-theme-nightfall/tree/migrate-templatesv2) (no PR right now, because its depends on the pagination PR).
+**An independent fork with support for pagination and the [new template system in Hugo v0.146.0](https://gohugo.io/templates/new-templatesystem-overview/)**  
+Upstream status: waiting on PRs in the original theme — [pagination](https://github.com/lordmathis/hugo-theme-nightfall/pull/61) and “new template system” (no PR yet; it depends on the pagination PR; WIP branch: <https://github.com/AleksCee/hugo-theme-nightfall/tree/migrate-templatesv2>).
 
-The following text is from the original theme, so the URLs are not for this clone/fork.
+The following sections are from the original theme; links point to the upstream project, not to this fork.
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/27bf2d3e-412b-442b-b234-60dbac60e714/deploy-status)](https://app.netlify.com/sites/hugo-theme-nightfall/deploys)
 
