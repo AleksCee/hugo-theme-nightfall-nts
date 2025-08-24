@@ -1,5 +1,10 @@
 # Nightfall
 
+**An independent clone/fork with support for pagination and the [new template system in Hugo v0.146.0](https://gohugo.io/templates/new-templatesystem-overview/)**  
+Waiting for PRs in the original theme: [pagination](https://github.com/lordmathis/hugo-theme-nightfall/pull/61) and [new template system](https://github.com/AleksCee/hugo-theme-nightfall/tree/migrate-templatesv2) (no PR right now, because its depends on the pagination PR).
+
+The following text is from the original theme, so the URLs are not for this clone/fork.
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/27bf2d3e-412b-442b-b234-60dbac60e714/deploy-status)](https://app.netlify.com/sites/hugo-theme-nightfall/deploys)
 
 Nightfall is a minimal dark theme for Hugo. [Demo](https://hugo-theme-nightfall.netlify.app)
@@ -192,7 +197,7 @@ sitedescription = 'Your website description'
 
 You can also add a description to individual posts in you website by adding `description` to the front matter. For example:
 
-```
+```toml
 +++
 title =  'This is the post title'
 draft = false
