@@ -32,3 +32,7 @@ jobs:
         run: sudo snap install dart-sass
       - name: Build website with Hugo
         run: hugo --minify --printI18nWarnings --templateMetrics --logLevel info
+      - name: Build example webseite with Hugo
+        run: |
+          cd exampleSite && \
+          hugo --gc --minify --printI18nWarnings --templateMetrics --logLevel info --themesDir ../.. --theme hugo-theme-nightfall-nts 
