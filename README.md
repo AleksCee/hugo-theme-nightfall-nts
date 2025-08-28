@@ -2,6 +2,8 @@
 
 [![Hugo Build on PR](https://github.com/AleksCee/hugo-theme-nightfall-nts/actions/workflows/build_pr.yml/badge.svg)](https://github.com/AleksCee/hugo-theme-nightfall-nts/actions/workflows/build_pr.yml)
 
+**My PRs have been approved, therefore this will not be updated anymore - my merged updated version see: <https://github.com/lordmathis/hugo-theme-nightfall/releases/tag/v0.10.0> and upcomming versions see: <https://github.com/lordmathis/hugo-theme-nightfall/releases/>**
+
 **An independent fork with support for pagination and the [new template system in Hugo v0.146.0](https://gohugo.io/templates/new-templatesystem-overview/)**  
 Upstream status: waiting on PRs in the original theme — [pagination](https://github.com/lordmathis/hugo-theme-nightfall/pull/61) and “new template system” (no PR yet; it depends on the pagination PR; WIP branch: <https://github.com/AleksCee/hugo-theme-nightfall/tree/migrate-templatesv2>).
 
